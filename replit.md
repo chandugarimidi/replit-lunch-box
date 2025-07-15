@@ -2,26 +2,54 @@
 
 ## Overview
 
-This is a Node.js workspace project that appears to be in its initial setup phase. The project is configured with basic OpenID Connect authentication capabilities and database integration using Drizzle ORM with Neon serverless PostgreSQL. The application includes memoization for performance optimization and uses TypeScript for type safety.
+This is a **Feedback Automation Tool** for content creators with AI-powered sentiment analysis and team collaboration features. The application allows teams to collect customer feedback from multiple sources, automatically analyze sentiment, and collaborate on responses. Built with React, Node.js/Express, PostgreSQL, and includes real-time sentiment analysis.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes (July 15, 2025)
+
+✓ Built complete feedback automation application with:
+- Team management and collaboration features
+- Project organization within teams  
+- Feedback collection with automatic AI sentiment analysis
+- Comment system for team collaboration
+- Filtering and organization by sentiment (positive/negative/neutral)
+- Demo authentication system for immediate testing
+
+✓ Database schema created with all tables:
+- Users, teams, team_members, projects, feedback, feedback_comments
+- Proper relationships and constraints established
+
+✓ Frontend built with React, Tailwind CSS, and modern UI components
+- Landing page, dashboard, project detail views
+- Real-time sentiment analysis display with confidence scores
+- Team collaboration interface
+
 ## System Architecture
 
 ### Backend Architecture
-- **Runtime**: Node.js with TypeScript
-- **Database ORM**: Drizzle ORM configured for serverless environments
-- **Database**: Neon serverless PostgreSQL
-- **Authentication**: OpenID Connect using the `openid-client` library
-- **Performance**: Memoization implemented via `memoizee` library
+- **Runtime**: Node.js with TypeScript and Express
+- **Database ORM**: Drizzle ORM with PostgreSQL
+- **Database**: PostgreSQL with complete schema for feedback management
+- **Authentication**: Demo authentication system (ready for Replit Auth integration)
+- **AI Features**: Built-in sentiment analysis engine for automatic feedback categorization
+- **API**: RESTful API with full CRUD operations for teams, projects, feedback, and comments
 
 ### Database Layer
-- Uses Drizzle ORM with Neon serverless PostgreSQL adapter
-- Database connection managed through connection pooling
-- Schema definitions are shared and imported from `@shared/schema`
-- WebSocket constructor configured for serverless compatibility
+- **Tables**: users, teams, team_members, projects, feedback, feedback_comments
+- **Relationships**: Proper foreign keys and relations between all entities
+- **Features**: Sentiment scoring, confidence levels, read/unread status, team roles
+- **Schema**: Type-safe schema definitions with Drizzle ORM and Zod validation
+
+### Frontend Architecture  
+- **Framework**: React 18 with TypeScript
+- **Routing**: Wouter for client-side routing
+- **State Management**: TanStack Query for server state management
+- **UI Components**: Custom components with Radix UI primitives
+- **Styling**: Tailwind CSS with dark mode support
+- **Forms**: React Hook Form with Zod validation
 
 ## Key Components
 
